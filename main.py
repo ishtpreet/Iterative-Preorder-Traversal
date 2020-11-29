@@ -3,6 +3,9 @@ class Node(object):
     self.value = value
     self.right = None
     self.left = None
+class BinaryTree(object):
+  def __init__(self, root):
+    self.root = Node(root)
 
 def iterativePreorderTraversal(root):
   if root is None:
@@ -25,11 +28,11 @@ def iterativePreorderTraversal(root):
     /   \     \
    3     2     8
 '''
-tree = Node(5)
-tree.left = Node(4)
-tree.right = Node(6)
-tree.left.left = Node(3)
-tree.left.right = Node(2)
-tree.right.right = Node(8)
+tree = BinaryTree(5)
+tree.root.left = Node(4)
+tree.root.right = Node(6)
+tree.root.left.left = Node(3)
+tree.root.left.right = Node(2)
+tree.root.right.right = Node(8)
 
-iterativePreorderTraversal(tree)
+iterativePreorderTraversal(tree.root)
