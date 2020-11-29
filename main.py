@@ -22,8 +22,8 @@ def iterativePreorderTraversal(root):
          5
        /   \
       4     6
-    /   \    \
-   3     2    8
+    /   \     \
+   3     2     8
 '''
 tree = Node(5)
 tree.left = Node(4)
